@@ -2,10 +2,9 @@ pipeline {
     agent any
     stages {
         stage('SCM Checkout'){
-            git 'https://github.com/nesar-ahmed/calculator'
-        }
-        stage('Compile Package'){
-            sh 'mvn package'
+            steps{
+                git 'https://github.com/nesar-ahmed/calculator'
+            }
         }
         stage('Build') {
             steps {
